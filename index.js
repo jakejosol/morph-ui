@@ -25,16 +25,16 @@ module.exports = {
 
      Layout: {
         AppBar: require('./components/layout/app-bar'),
-        Card: require('./components/form/card'),
-        CardLoader: require('./components/form/card-loader'),
-        Column: require('./components/form/column'),
-        Container: require('./components/form/container'),
-        Content: require('./components/form/content'),
-        InfoCard: require('./components/form/info-card'),
-        NavBar: require('./components/form/nav-bar'),
-        Side: require('./components/form/side'),
-        SideMenu: require('./components/form/side-menu'),
-        Table: require('./components/form/table')
+        Card: require('./components/layout/card'),
+        CardLoader: require('./components/layout/card-loader'),
+        Column: require('./components/layout/column'),
+        Container: require('./components/layout/container'),
+        Content: require('./components/layout/content'),
+        InfoCard: require('./components/layout/info-card'),
+        NavBar: require('./components/layout/nav-bar'),
+        Side: require('./components/layout/side'),
+        SideMenu: require('./components/layout/side-menu'),
+        Table: require('./components/layout/table')
     },
 
      Widgets: {
