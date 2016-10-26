@@ -1,0 +1,113 @@
+.table-container
+{
+	display:block;
+	border:1px solid rgba(0, 0, 0, 0.15);
+}
+
+.table-container > .table-controls
+{
+	display:block;
+	background:rgba(0,0,0,0.15);
+}
+
+.table-container > .table-controls .input-group
+{
+	display:block;
+	width:auto;
+	margin:15px 12px;
+}
+
+.table-container > .table-controls .table-buttons
+{
+	margin:15px 12px;
+}
+
+.table-container > .table-wrapper
+{
+	display:block;
+	width:100%;
+	overflow-x:auto;
+}
+
+.table-container > .table-wrapper > .table
+{
+	display:table;
+	width:100%;
+	text-align:left;
+}
+
+.table-container > .table-wrapper > .table > thead
+{
+	background:rgba(0,0,0,0.15);
+}
+
+.table-container > .table-wrapper > .table > thead > tr > th
+{
+	font-weight:500;
+	cursor:pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.table-container > .table-wrapper > .table > thead > tr > th > .icon
+{
+	margin-left: 10px;
+}
+
+.table-container > .table-wrapper > .table > thead > tr > th,
+.table-container > .table-wrapper > .table > tbody > tr > td
+{
+	padding:10px;
+	border-right:1px solid rgba(0,0,0,0.2);
+	min-width:100px;
+}
+
+.table-container > .table-wrapper > .table > thead > tr > th:last-child,
+.table-container > .table-wrapper > .table > tbody > tr > td:last-child
+{
+	border-right:0;
+}
+
+.table-container > .table-wrapper > .table > tbody > tr > td.default-message
+{
+	padding:20px;
+}
+
+.table-container > .table-wrapper > .table > tbody > tr:nth-child(even)
+{
+	background:rgba(0,0,0,0.05);
+}
+
+.table-container > .table-pagination
+{
+	display:block;
+	background:rgba(0,0,0,0.15);
+	padding:10px;
+}
+
+.table-container > .table-pagination .page-info
+{
+	display:inline-block;
+	padding:12px 15px;
+	font-size:9pt;
+    font-weight:700;
+}
+
+@media screen and (max-width: 800px)
+{
+	.table-container > .table-wrapper > .table > thead > tr > th
+	{
+		border-top: 1px solid rgba(0,0,0,0.2);
+	}
+
+	.table-container > .table-wrapper > .table > thead > tr > th,
+	.table-container > .table-wrapper > .table > tbody > tr > td
+	{
+		display:block;
+		border-right:0;
+		word-break: break-all;
+	}
+}

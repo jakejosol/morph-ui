@@ -1,0 +1,23 @@
+@content-width: 100% - @side-width;
+
+.content
+{
+	display:inline-block;
+	vertical-align:top;
+	width:@content-width;
+}
+
+.content .content-block
+{
+	display:block;
+	padding:20px;
+}
+
+@media screen and (max-width: 1024px)
+{
+	.content
+	{
+		width:100%;
+		padding-top:10px;
+	}
+}

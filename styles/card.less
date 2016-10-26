@@ -1,0 +1,111 @@
+.card-block
+{
+	display:block;
+	padding:20px;
+    -webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside:avoid-column;
+}
+
+.card
+{	
+	display:block;
+	padding:0;
+	background:#fff;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	position:relative;
+}
+
+.card-loader
+{
+	position:absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.6);
+	display: none;
+}
+
+.card-loader.active
+{
+	display:block;
+}
+
+.card-loader .loader-block
+{
+	position: relative;
+	width:100%;
+	height:100%;
+}
+
+.card-loader .loader-block .loader-icon
+{
+	font-size:@primary-text-size * 5;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card.padded
+{
+	padding:20px;
+}
+
+.card h4
+{
+	color:rgba(0,0,0,0.5);
+	font-size:@primary-text-size - 2pt;
+	letter-spacing: 0.05em;
+	margin:0;
+}
+
+.card h1
+{
+	color:#555;
+	font-size:@primary-text-size + 10pt;
+    font-weight:400;
+	margin:0;
+}
+
+.card .details h3:last-child
+{
+	border-right:1px solid transparent;
+}
+
+.card .details h3
+{
+	display:inline-block;
+	font-size:@primary-text-size + 2pt;
+	min-width:100px;
+	width:49%;
+	margin-right:1%;
+}
+
+.card .details h3:last-child
+{
+	margin-right:0;
+}
+
+.card .details h3 small
+{
+	display:block;
+    font-weight:500;
+	color:rgba(0,0,0,0.3);
+	text-transform: uppercase;
+}
+
+.card hr
+{
+	border:0;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	margin:20px 0;
+}
+
+.card img
+{
+	display:inline-block;
+	width:100%;
+	height: auto;
+}

@@ -1,0 +1,34 @@
+.radio
+{
+	display: inline-block;
+	width:100%;
+	margin-bottom:10px;
+	color: @primary-text-color;
+	cursor:pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.radio [type=radio]
+{
+	display:none;
+}
+
+.radio [type=radio] + span:before
+{
+	content:'\f10c';
+	font-family: FontAwesome;
+	color:rgba(0,0,0,0.4);
+	margin-right:10px;
+	-webkit-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+.radio [type=radio]:checked + span:before
+{
+	content:'\f192';
+	color:@primary-color;
+}

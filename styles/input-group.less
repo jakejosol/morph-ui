@@ -1,0 +1,191 @@
+input[type=text],
+input[type=password],
+input[type=email]
+{
+	display:block;
+	width:100%;
+	background:transparent;
+	border:0;
+	border-bottom:1px solid rgba(0,0,0,0.4);
+	padding:0 0 10px 0;
+	margin-bottom:20px;
+	outline:none;
+	-webkit-transition: border 0.3s ease;
+	-o-transition: border 0.3s ease;
+	transition: border 0.3s ease;
+	color:#333;
+}
+
+input:focus, 
+input:active
+{
+	border-bottom:1px solid @primary-color;
+}
+
+input:invalid
+{
+	box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+input:disabled, 
+button:disabled
+{
+	opacity:0.3;
+}
+
+.input-group
+{
+	display:inline-block;
+	width:100%;
+	position:relative;
+	margin:10px 0;
+}
+
+.input-group input
+{
+	padding:10px 0;
+	font-size:12pt;
+	margin:0;
+}
+
+.input-group label
+{
+	display:inline-block;
+	width:100%;
+	position:absolute;
+	top:10px;
+	font-size:12pt;
+	color:rgba(0,0,0,0.5);
+  	pointer-events:none;
+  	-webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  	-o-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  	transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.input-group .error
+{
+	display:block;
+	text-align:left;
+	padding:5px 0;
+	font-size:9pt;
+	color: @warn-color;
+}
+
+.input-group input:focus ~ label,
+.input-group input.filled ~ label,
+.input-group input[value^=""] ~ label,
+{
+	top:-10px;
+	font-size:9pt;
+	color:#555;
+}
+
+.input-group.rounded
+{
+	position:relative;
+}
+
+.input-group.rounded input
+{
+	background:rgba(0, 0, 0, 0.1);
+	margin:0;
+	font-size:10pt;
+	padding:10px 15% 10px 5%;
+	width:80%;
+	border:1px solid transparent;
+	border-radius:15px;
+	-webkit-transition: background 0.4s;
+	-moz-transition: background 0.4s;
+	transition: background 0.4s;
+	color:rgba(0,0,0,0.9);
+}
+
+.input-group.rounded input::-webkit-input-placeholder
+{
+	color:rgba(0,0,0,0.7);
+}
+
+.input-group.rounded input::-moz-placeholder
+{
+	color:rgba(0,0,0,0.7);
+}
+
+.input-group.rounded input:-ms-input-placeholder
+{
+	color:rgba(0,0,0,0.7);
+}
+
+.input-group.rounded input:focus
+{
+	background:rgba(0, 0, 0, 0.2);
+}
+
+.input-group.rounded.search:before
+{
+	content: '\f002';
+	color:rgba(0,0,0,0.5);
+	font-family:FontAwesome;
+	position:absolute;
+	font-size:10pt;
+	top:50%;
+	transform:translateY(-50%);
+	right:20px;
+}
+
+.input-group.date input[type=text]
+{
+	display:inline-block;
+	width:64px;
+	text-align:center;
+}
+
+.input-group.date .dividers
+{
+	display:inline-block;
+	width:6px;
+}
+
+.input-group.date label
+{
+	top:-10px;
+	left:0;
+	font-size:9pt;
+	color:#555;
+}
+
+.input-group.file
+{
+	cursor:pointer;
+	width:auto;
+}
+
+.input-group.file.disabled
+{
+	cursor: not-allowed;
+}
+
+.input-group.file input
+{
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	opacity:0;
+	padding:0;
+	font-size:0;
+	margin:0;
+	cursor:pointer;
+}
+
+.input-group textarea
+{	
+	border:0; 
+	border-bottom: 1px solid rgba(0,0,0,0.4); 
+	max-width: 100%;
+	width:100%;
+	resize: none;
+	padding: 0 0 10px 0;
+}

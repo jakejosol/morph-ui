@@ -1,0 +1,94 @@
+.app-bar
+{
+	display:block;
+	width:100%;
+	background: @primary-color;
+    position:relative;    
+}
+
+.app-bar .logo
+{
+    display:inline-block;
+    padding:15px;
+}
+
+.app-bar .logo h1
+{
+    margin:0;
+    padding:0;
+    height:28pt;
+    line-height:32pt;
+}
+
+.app-bar .logo h1 > img
+{
+    display:inline-block;
+	width:auto;
+    height:100%;
+}
+
+.app-bar .controls
+{
+    display:inline-block;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    vertical-align:middle;
+}
+
+.app-bar .controls .input-group
+{
+    display:block;
+    margin:0;
+}
+
+.app-bar .nav-bar
+{
+    display:inline-block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    vertical-align:middle;
+}
+
+.app-bar .nav-bar > ul
+{
+	display:block;
+	list-style-type: none;
+	margin:0;
+	padding:0;
+    height:100%;
+}
+
+.app-bar .nav-bar > ul > li
+{
+	display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+
+.app-bar .nav-bar > ul > li > a
+{
+	display:inline-block;
+    height:100%;
+    vertical-align: middle;
+    padding:0 20px;
+}
+
+.app-bar .nav-bar > ul > li > a > span 
+{
+    display:block;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+	color: #fff;
+	font-size:11pt;
+	font-family:Roboto;
+    font-weight:400;
+}
+
+.app-bar .nav-bar > ul > li > a:hover
+{
+	background: rgba(255, 255, 255, 0.1);
+}
