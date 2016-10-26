@@ -1,7 +1,7 @@
 module.exports = {
 
      Templates: {
-        Page: require('./components/charts/templates/page')
+        Page: require('./components/templates/page')
     },
 
      Charts: {
