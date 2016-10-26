@@ -1,16 +1,16 @@
-export default class Morph {
+module.exports = {
 
-    static Templates = {
+     Templates = {
         Page: require('./charts/templates/page')
-    }
+    },
 
-    static Charts = {
+     Charts = {
         BarStack: require('./charts/bar-stack'),
         LineGraph: require('./charts/line-graph'),
         PieChart: require('./charts/pie-chart')
-    }
+    },
 
-    static Form = {
+     Form = {
         Checkbox: require('./form/checkbox'),
         CheckboxGroup: require('./form/checkbox-group'),
         InputDate: require('./form/input-date'),
@@ -21,9 +21,9 @@ export default class Morph {
         Radio: require('./form/radio'),
         RadioGroup: require('./form/radio-group'),
         Textarea: require('./form/textarea')
-    }
+    },
 
-    static Layout = {
+     Layout = {
         AppBar: require('./layout/app-bar'),
         Card: require('./form/card'),
         CardLoader: require('./form/card-loader'),
@@ -35,9 +35,9 @@ export default class Morph {
         Side: require('./form/side'),
         SideMenu: require('./form/side-menu'),
         Table: require('./form/table')
-    }
+    },
 
-    static Widgets = {
+     Widgets = {
         Button: require('./widgets/button'),
         ButtonGroup: require('./widgets/button-group'),
         Icon: require('./widgets/icon'),
