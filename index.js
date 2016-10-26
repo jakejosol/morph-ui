@@ -1,16 +1,16 @@
 module.exports = {
 
-     Templates = {
+     Templates: {
         Page: require('./charts/templates/page')
     },
 
-     Charts = {
+     Charts: {
         BarStack: require('./charts/bar-stack'),
         LineGraph: require('./charts/line-graph'),
         PieChart: require('./charts/pie-chart')
     },
 
-     Form = {
+     Form: {
         Checkbox: require('./form/checkbox'),
         CheckboxGroup: require('./form/checkbox-group'),
         InputDate: require('./form/input-date'),
@@ -23,7 +23,7 @@ module.exports = {
         Textarea: require('./form/textarea')
     },
 
-     Layout = {
+     Layout: {
         AppBar: require('./layout/app-bar'),
         Card: require('./form/card'),
         CardLoader: require('./form/card-loader'),
@@ -37,7 +37,7 @@ module.exports = {
         Table: require('./form/table')
     },
 
-     Widgets = {
+     Widgets: {
         Button: require('./widgets/button'),
         ButtonGroup: require('./widgets/button-group'),
         Icon: require('./widgets/icon'),
