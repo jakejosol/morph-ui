@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
 
      Templates: {
         Page: require('./components/templates/page')
@@ -44,4 +44,5 @@ module.exports = {
         Logo: require('./components/widgets/logo'),
         TextButton: require('./components/widgets/text-button')
     }
-};
+};*/
+export Template from './components/templates';
