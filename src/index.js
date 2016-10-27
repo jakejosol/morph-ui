@@ -1,48 +1,39 @@
-/*module.exports = {
+// Templates
+export Page from './components/templates/page';
 
-     Templates: {
-        Page: require('./components/templates/page')
-    },
+// Charts
+export BarStack from './components/charts/bar-stack';
+export LineGraph from './components/charts/line-graph';
+export PieChart from './components/charts/pie-chart';
 
-     Charts: {
-        BarStack: require('./components/charts/bar-stack'),
-        LineGraph: require('./components/charts/line-graph'),
-        PieChart: require('./components/charts/pie-chart')
-    },
+// Form
+export Checkbox from './components/form/checkbox';
+export CheckboxGroup from './components/form/checkbox-group';
+export InputDate from './components/form/input-date';
+export InputFile from './components/form/input-file';
+export InputGroup from './components/form/input-group';
+export InputMoney from './components/form/input-money';
+export InputNumber from './components/form/input-number';
+export Radio from './components/form/radio';
+export RadioGroup from './components/form/radio-group';
+export Textarea from './components/form/textarea')
 
-     Form: {
-        Checkbox: require('./components/form/checkbox'),
-        CheckboxGroup: require('./components/form/checkbox-group'),
-        InputDate: require('./components/form/input-date'),
-        InputFile: require('./components/form/input-file'),
-        InputGroup: require('./components/form/input-group'),
-        InputMoney: require('./components/form/input-money'),
-        InputNumber: require('./components/form/input-number'),
-        Radio: require('./components/form/radio'),
-        RadioGroup: require('./components/form/radio-group'),
-        Textarea: require('./components/form/textarea')
-    },
-
-     Layout: {
-        AppBar: require('./components/layout/app-bar'),
-        Card: require('./components/layout/card'),
-        CardLoader: require('./components/layout/card-loader'),
-        Column: require('./components/layout/column'),
-        Container: require('./components/layout/container'),
-        Content: require('./components/layout/content'),
-        InfoCard: require('./components/layout/info-card'),
-        NavBar: require('./components/layout/nav-bar'),
-        Side: require('./components/layout/side'),
-        SideMenu: require('./components/layout/side-menu'),
-        Table: require('./components/layout/table')
-    },
-
-     Widgets: {
-        Button: require('./components/widgets/button'),
-        ButtonGroup: require('./components/widgets/button-group'),
-        Icon: require('./components/widgets/icon'),
-        Logo: require('./components/widgets/logo'),
-        TextButton: require('./components/widgets/text-button')
-    }
-};*/
-export Templates from './components/templates';
+// Layout
+export AppBar from './components/layout/app-bar';
+export Card from './components/layout/card';
+export CardLoader from './components/layout/card-loader';
+export Column from './components/layout/column';
+export Container from './components/layout/container';
+export Content from './components/layout/content';
+export InfoCard from './components/layout/info-card';
+export NavBar from './components/layout/nav-bar';
+export Side from './components/layout/side';
+export SideMenu from './components/layout/side-menu';
+export Table from './components/layout/table')
+    
+// Widgets
+export Button from './components/widgets/button';
+export ButtonGroup from './components/widgets/button-group';
+export Icon from './components/widgets/icon';
+export Logo from './components/widgets/logo';
+export TextButton from './components/widgets/text-button';
