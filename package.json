@@ -2,9 +2,8 @@
   "name": "morph-ui",
   "version": "1.0.8",
   "description": "Morph UI",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "main": "./dist/index.js",
     "build": "babel src --presets babel-preset-es2015 --presets babel-preset-react --out-dir dist",
     "prepublish": "npm run build"
   },
