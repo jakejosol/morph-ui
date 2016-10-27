@@ -16,7 +16,7 @@ export InputMoney from './components/form/input-money';
 export InputNumber from './components/form/input-number';
 export Radio from './components/form/radio';
 export RadioGroup from './components/form/radio-group';
-export Textarea from './components/form/textarea')
+export Textarea from './components/form/textarea';
 
 // Layout
 export AppBar from './components/layout/app-bar';
@@ -29,7 +29,7 @@ export InfoCard from './components/layout/info-card';
 export NavBar from './components/layout/nav-bar';
 export Side from './components/layout/side';
 export SideMenu from './components/layout/side-menu';
-export Table from './components/layout/table')
+export Table from './components/layout/table';
     
 // Widgets
 export Button from './components/widgets/button';
