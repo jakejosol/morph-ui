@@ -1,24 +1,70 @@
-// References
-import React from 'react';
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _logo = require('../widgets/logo');
+
+var _logo2 = _interopRequireDefault(_logo);
+
+var _navBar = require('./nav-bar');
+
+var _navBar2 = _interopRequireDefault(_navBar);
+
+var _column = require('../layout/column');
+
+var _column2 = _interopRequireDefault(_column);
+
+var _inputGroup = require('../form/input-group');
+
+var _inputGroup2 = _interopRequireDefault(_inputGroup);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // References
+
 
 // Components
-import Logo from '../widgets/logo';
-import NavBar from './nav-bar';
-import Column from '../layout/column';
-import InputGroup from '../form/input-group';
 
-export default class AppBar extends React.Component {
-	render() {
-		return React.createElement(
-			'header',
-			{ className: 'app-bar' },
-			React.createElement(Logo, { url: this.props.logo, title: this.props.title }),
-			this.props.children ? React.createElement(
-				'div',
-				{ className: 'controls' },
-				this.props.children
-			) : '',
-			React.createElement(NavBar, { links: this.props.links })
-		);
+
+var AppBar = function (_React$Component) {
+	_inherits(AppBar, _React$Component);
+
+	function AppBar() {
+		_classCallCheck(this, AppBar);
+
+		return _possibleConstructorReturn(this, (AppBar.__proto__ || Object.getPrototypeOf(AppBar)).apply(this, arguments));
 	}
-}
+
+	_createClass(AppBar, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'header',
+				{ className: 'app-bar' },
+				_react2.default.createElement(_logo2.default, { url: this.props.logo, title: this.props.title }),
+				this.props.children ? _react2.default.createElement(
+					'div',
+					{ className: 'controls' },
+					this.props.children
+				) : '',
+				_react2.default.createElement(_navBar2.default, { links: this.props.links })
+			);
+		}
+	}]);
+
+	return AppBar;
+}(_react2.default.Component);
+
+exports.default = AppBar;

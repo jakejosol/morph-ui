@@ -1,3 +1,5 @@
+'use strict';
+
 // References
 var Backbone = require('backbone');
 
@@ -6,10 +8,10 @@ module.exports = Backbone.Router.extend({
         '': 'getDefaultRoute',
         '!/:name': 'getRoute'
     },
-    getDefaultRoute: function () {
+    getDefaultRoute: function getDefaultRoute() {
         this.current = 'default';
     },
-    getRoute: function (name) {
+    getRoute: function getRoute(name) {
         this.current = name;
     }
 });
