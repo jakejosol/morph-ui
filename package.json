@@ -4,7 +4,10 @@
   "description": "Morph UI",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "babel src --presets es2015,stage-1,react --out-dir dist",
+    "build": "npm run build:scripts && npm run build:styles && npm run build:utils",
+    "build:scripts": "babel src --presets es2015,stage-1,react --out-dir dist",
+    "build:styles": "cp -r ./src/styles ./dist/styles",
+    "build:utils": "cp -r ./src/utils ./dist/utils",
     "prepublish": "npm run build"
   },
   "keywords": [
