@@ -45,4 +45,4 @@
         TextButton: require('./components/widgets/text-button')
     }
 };*/
-export Template from './components/templates';
+export Templates from './components/templates';
