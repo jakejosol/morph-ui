@@ -5,7 +5,7 @@ import moment from 'moment-timezone';
 export default class InputDate extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { year: '', month: '', day: '', error: null };
+		this.state = { year: this.props.year || '', month: this.props.month || '', day: this.props.day || '', error: null };
 		this.onYearChange = this.onYearChange.bind(this);
 		this.onMonthChange = this.onMonthChange.bind(this);
 		this.onDayChange = this.onDayChange.bind(this);
