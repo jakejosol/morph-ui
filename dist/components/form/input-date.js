@@ -31,7 +31,7 @@ var InputDate = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (InputDate.__proto__ || Object.getPrototypeOf(InputDate)).call(this, props));
 
-		_this.state = { year: '', month: '', day: '', error: null };
+		_this.state = { year: _this.props.year || '', month: _this.props.month || '', day: _this.props.day || '', error: null };
 		_this.onYearChange = _this.onYearChange.bind(_this);
 		_this.onMonthChange = _this.onMonthChange.bind(_this);
 		_this.onDayChange = _this.onDayChange.bind(_this);
