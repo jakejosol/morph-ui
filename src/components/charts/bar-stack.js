@@ -75,7 +75,7 @@ export default class BarStack extends React.Component {
 		};
 
 		return <div className='bar-stack'>
-			<Chart config={config} />
+			<Chart config={config} exportingEnabled={this.props.exportingEnabled} />
 		</div>;
 	}
 }

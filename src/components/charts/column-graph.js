@@ -82,7 +82,7 @@ export default class ColumnGraph extends React.Component {
 		};
 
 		return <div className='line-graph'>
-			<Chart config={config} />
+			<Chart config={config} exportingEnabled={this.props.exportingEnabled} />
 		</div>;
 	}
 }
