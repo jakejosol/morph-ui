@@ -29,25 +29,26 @@ export default class Chart extends React.Component {
     }
 
     enableExporting(config) {
-        if(!this.props.exportingEnabled) return;
+        if(this.props.exportingEnabled)
+        {
+            // Activate exporting
+            HighchartsExporting(Highcharts);
 
-        // Activate exporting
-        HighchartsExporting(Highcharts);
-
-        // Add exporting
-        config.exporting = {
-            chartOptions: { // specific options for the exported image
-                plotOptions: {
-                    series: {
-                        dataLabels: {
-                            enabled: true
+            // Add exporting
+            config.exporting = {
+                chartOptions: { // specific options for the exported image
+                    plotOptions: {
+                        series: {
+                            dataLabels: {
+                                enabled: true
+                            }
                         }
                     }
-                }
-            },
-            scale: 3,
-            fallbackToExportServer: false
-        };
+                },
+                scale: 3,
+                fallbackToExportServer: false
+            };
+        }
     }
 
     renderChart(type, config) {
