@@ -64,25 +64,25 @@ var Chart = function (_React$Component) {
     }, {
         key: 'enableExporting',
         value: function enableExporting(config) {
-            if (!this.props.exportingEnabled) return;
+            if (this.props.exportingEnabled) {
+                // Activate exporting
+                (0, _exporting2.default)(_highcharts2.default);
 
-            // Activate exporting
-            (0, _exporting2.default)(_highcharts2.default);
-
-            // Add exporting
-            config.exporting = {
-                chartOptions: { // specific options for the exported image
-                    plotOptions: {
-                        series: {
-                            dataLabels: {
-                                enabled: true
+                // Add exporting
+                config.exporting = {
+                    chartOptions: { // specific options for the exported image
+                        plotOptions: {
+                            series: {
+                                dataLabels: {
+                                    enabled: true
+                                }
                             }
                         }
-                    }
-                },
-                scale: 3,
-                fallbackToExportServer: false
-            };
+                    },
+                    scale: 3,
+                    fallbackToExportServer: false
+                };
+            }
         }
     }, {
         key: 'renderChart',

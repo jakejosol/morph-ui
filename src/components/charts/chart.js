@@ -49,6 +49,10 @@ export default class Chart extends React.Component {
                 fallbackToExportServer: false
             };
         }
+        else
+        {
+            config.exporting = undefined;
+        }
     }
 
     renderChart(type, config) {
