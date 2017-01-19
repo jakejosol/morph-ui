@@ -112,7 +112,7 @@ var BarStack = function (_React$Component) {
 			return _react2.default.createElement(
 				'div',
 				{ className: 'bar-stack' },
-				_react2.default.createElement(_chart2.default, { config: config })
+				_react2.default.createElement(_chart2.default, { config: config, exportingEnabled: this.props.exportingEnabled })
 			);
 		}
 	}]);
