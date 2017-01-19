@@ -105,7 +105,7 @@ var PieChart = function (_React$Component) {
 			return _react2.default.createElement(
 				'div',
 				{ className: 'pie-chart' },
-				_react2.default.createElement(_chart2.default, { config: config, exportingEnabled: this.props.exportingEnabled })
+				_react2.default.createElement(_chart2.default, { config: config, exportingEnabled: this.props.exportingEnabled ? true : false })
 			);
 		}
 	}]);
