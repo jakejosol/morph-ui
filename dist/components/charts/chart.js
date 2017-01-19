@@ -83,7 +83,9 @@ var Chart = function (_React$Component) {
                     fallbackToExportServer: false
                 };
             } else {
-                config.exporting = undefined;
+                config.exporting = {
+                    enabled: false
+                };
             }
         }
     }, {

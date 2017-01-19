@@ -4,6 +4,7 @@ export Page from './components/templates/page';
 // Charts
 export BarStack from './components/charts/bar-stack';
 export LineGraph from './components/charts/line-graph';
+export ColumnGraph from './components/charts/column-graph';
 export PieChart from './components/charts/pie-chart';
 
 // Form
