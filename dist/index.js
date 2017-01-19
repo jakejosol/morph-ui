@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.TextButton = exports.Logo = exports.Icon = exports.ButtonGroup = exports.Button = exports.Table = exports.SideMenu = exports.Side = exports.NavBar = exports.InfoCard = exports.Content = exports.Container = exports.Column = exports.CardLoader = exports.Card = exports.AppBar = exports.Textarea = exports.RadioGroup = exports.Radio = exports.InputNumber = exports.InputMoney = exports.InputGroup = exports.InputFile = exports.InputDate = exports.CheckboxGroup = exports.Checkbox = exports.PieChart = exports.LineGraph = exports.BarStack = exports.Page = undefined;
+exports.TextButton = exports.Logo = exports.Icon = exports.ButtonGroup = exports.Button = exports.Table = exports.SideMenu = exports.Side = exports.NavBar = exports.InfoCard = exports.Content = exports.Container = exports.Column = exports.CardLoader = exports.Card = exports.AppBar = exports.Textarea = exports.RadioGroup = exports.Radio = exports.InputNumber = exports.InputMoney = exports.InputGroup = exports.InputFile = exports.InputDate = exports.CheckboxGroup = exports.Checkbox = exports.PieChart = exports.ColumnGraph = exports.LineGraph = exports.BarStack = exports.Page = undefined;
 
 var _page = require('./components/templates/page');
 
@@ -16,6 +16,10 @@ var _barStack2 = _interopRequireDefault(_barStack);
 var _lineGraph = require('./components/charts/line-graph');
 
 var _lineGraph2 = _interopRequireDefault(_lineGraph);
+
+var _columnGraph = require('./components/charts/column-graph');
+
+var _columnGraph2 = _interopRequireDefault(_columnGraph);
 
 var _pieChart = require('./components/charts/pie-chart');
 
@@ -134,6 +138,7 @@ exports.Page = _page2.default;
 
 exports.BarStack = _barStack2.default;
 exports.LineGraph = _lineGraph2.default;
+exports.ColumnGraph = _columnGraph2.default;
 exports.PieChart = _pieChart2.default;
 
 // Form

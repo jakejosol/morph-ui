@@ -118,7 +118,7 @@ var ColumnGraph = function (_React$Component) {
 
 			return _react2.default.createElement(
 				'div',
-				{ className: 'line-graph' },
+				{ className: 'column-graph' },
 				_react2.default.createElement(_chart2.default, { config: config, exportingEnabled: this.props.exportingEnabled })
 			);
 		}
