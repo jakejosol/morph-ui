@@ -71,7 +71,7 @@ export default class PieChart extends React.Component {
 		};
 		
 		return <div className='pie-chart'>
-			<Chart config={config} exportingEnabled={this.props.exportingEnabled} />
+			<Chart config={config} exportingEnabled={this.props.exportingEnabled? true : false} />
 		</div>;
 	}
 }
