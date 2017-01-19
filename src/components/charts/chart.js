@@ -51,7 +51,9 @@ export default class Chart extends React.Component {
         }
         else
         {
-            config.exporting = undefined;
+            config.exporting = {
+                enabled: false
+            };
         }
     }
 

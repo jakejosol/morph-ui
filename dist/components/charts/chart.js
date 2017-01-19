@@ -82,6 +82,8 @@ var Chart = function (_React$Component) {
                     scale: 3,
                     fallbackToExportServer: false
                 };
+            } else {
+                config.exporting = undefined;
             }
         }
     }, {
