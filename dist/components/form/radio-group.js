@@ -48,7 +48,7 @@ var RadioGroup = function (_React$Component) {
 		value: function componentWillReceiveProps(props) {
 			for (var index in props.items) {
 				var item = props.items[index];
-				if (item.label != this.state.items[index].label || item.value != this.state.items[index].value) return this.setState({ selected: null, items: this.props.items });
+				if (item.label != this.state.items[index].label || item.value != this.state.items[index].value) return this.setState({ selected: null, items: props.items });
 			}
 		}
 	}, {
