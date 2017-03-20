@@ -40,9 +40,9 @@ var RadioGroup = function (_React$Component) {
 	}
 
 	_createClass(RadioGroup, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {
-			this.setState({ selected: this.props.items[0].value });
+		key: 'componentWillReceiveProps',
+		value: function componentWillReceiveProps(props) {
+			if (props && props.items && props.items.length > 0) this.setState({ selected: props.items[0].value });
 		}
 	}, {
 		key: 'selectItem',
