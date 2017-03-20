@@ -16,7 +16,7 @@ export default class RadioGroup extends React.Component {
 		for(var index in props.items)
 		{
 			var item = props.items[index];
-			if(item.label != this.state.items[index].label || item.value != this.state.items[index].value);
+			if(item.label != this.state.items[index].label || item.value != this.state.items[index].value)
 				return this.setState({ selected: null, items: this.props.items });
 		}
 	}
