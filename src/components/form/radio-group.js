@@ -12,7 +12,7 @@ export default class RadioGroup extends React.Component {
 	}
 
 	componentWillReceiveProps(props) {
-		if(props && props.items && props.items.length > 0) this.setState({ selected: props.items[0].value });
+		this.setState({ selected: null });
 	}
 
 	selectItem(value) {
