@@ -34,12 +34,17 @@ var RadioGroup = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (RadioGroup.__proto__ || Object.getPrototypeOf(RadioGroup)).call(this, props));
 
-		_this.state = { selected: _this.props.items[0].value };
+		_this.state = { selected: null };
 		_this.selectItem = _this.selectItem.bind(_this);
 		return _this;
 	}
 
 	_createClass(RadioGroup, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			this.setState({ selected: this.props.items[0].value });
+		}
+	}, {
 		key: 'selectItem',
 		value: function selectItem(value) {
 			this.setState({ selected: value }, function () {
