@@ -11,8 +11,8 @@ export default class RadioGroup extends React.Component {
 		this.selectItem = this.selectItem.bind(this);
 	}
 
-	componentDidMount() {
-		this.setState({ selected: this.props.items[0].value });
+	componentWillReceiveProps(props) {
+		if(props && props.items && props.items.length > 0) this.setState({ selected: props.items[0].value });
 	}
 
 	selectItem(value) {
