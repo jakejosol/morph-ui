@@ -1,5 +1,6 @@
 // References
 import React from 'react';
+import _ from 'underscore';
 
 // Components
 import Radio from './radio';
@@ -7,12 +8,13 @@ import Radio from './radio';
 export default class RadioGroup extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { selected: null };
+		this.state = { selected: null, items: this.props.items };
 		this.selectItem = this.selectItem.bind(this);
 	}
 
 	componentWillReceiveProps(props) {
-		this.setState({ selected: null });
+		if(!_.isEqual(props.items, this.state.items))
+			this.setState({ selected: null, items: this.props.items });
 	}
 
 	selectItem(value) {
