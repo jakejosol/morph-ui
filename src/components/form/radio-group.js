@@ -7,8 +7,12 @@ import Radio from './radio';
 export default class RadioGroup extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { selected: this.props.items[0].value };
+		this.state = { selected: null };
 		this.selectItem = this.selectItem.bind(this);
+	}
+
+	componentDidMount() {
+		this.setState({ selected: this.props.items[0].value });
 	}
 
 	selectItem(value) {
