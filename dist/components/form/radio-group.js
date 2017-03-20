@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _underscore = require('underscore');
+
+var _underscore2 = _interopRequireDefault(_underscore);
+
 var _radio = require('./radio');
 
 var _radio2 = _interopRequireDefault(_radio);
@@ -34,7 +38,7 @@ var RadioGroup = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (RadioGroup.__proto__ || Object.getPrototypeOf(RadioGroup)).call(this, props));
 
-		_this.state = { selected: null };
+		_this.state = { selected: null, items: _this.props.items };
 		_this.selectItem = _this.selectItem.bind(_this);
 		return _this;
 	}
@@ -42,7 +46,7 @@ var RadioGroup = function (_React$Component) {
 	_createClass(RadioGroup, [{
 		key: 'componentWillReceiveProps',
 		value: function componentWillReceiveProps(props) {
-			this.setState({ selected: null });
+			if (!_underscore2.default.isEqual(props.items, this.state.items)) this.setState({ selected: null, items: this.props.items });
 		}
 	}, {
 		key: 'selectItem',
