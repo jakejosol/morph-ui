@@ -52,7 +52,7 @@ var Checkbox = function (_React$Component) {
 				_react2.default.createElement(
 					'span',
 					null,
-					this.props.label
+					_react2.default.createElement(Markdown, { source: this.props.label })
 				)
 			);
 		}

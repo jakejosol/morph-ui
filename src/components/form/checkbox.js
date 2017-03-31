@@ -1,5 +1,6 @@
 // References
 import React from 'react';
+import Markdown from 'react-markdown';
 
 export default class Checkbox extends React.Component {
 
