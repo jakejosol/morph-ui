@@ -1,5 +1,6 @@
 // References
 import React from 'react';
+import Markdown from 'react-markdown';
 
 export default class Radio extends React.Component {
 
@@ -21,7 +22,7 @@ export default class Radio extends React.Component {
 				value={this.props.value}
 				checked={this.props.active} 
 				onChange={this.onChange} />
-			<span>{this.props.label}</span>
+			<span><Markdown source={this.props.label} /></span>
 		</label>;
 	}
 }

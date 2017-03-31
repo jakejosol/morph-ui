@@ -21,7 +21,7 @@ export default class Checkbox extends React.Component {
 				name={this.props.name + '[]'} 
 				checked={this.props.active}
 				onChange={this.onChange} />
-			<span>{this.props.label}</span>
+			<span><Markdown source={this.props.label} /></span>
 		</label>;
 	}
 }
