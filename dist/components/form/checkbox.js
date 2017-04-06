@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactMarkdown = require('react-markdown');
+
+var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -52,7 +56,7 @@ var Checkbox = function (_React$Component) {
 				_react2.default.createElement(
 					'span',
 					null,
-					_react2.default.createElement(Markdown, { source: this.props.label })
+					_react2.default.createElement(_reactMarkdown2.default, { source: this.props.label })
 				)
 			);
 		}
