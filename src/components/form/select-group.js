@@ -114,7 +114,7 @@ export default class SelectGroup extends React.Component {
                     {this.getValue()}
                 </div>
                 <div className='select-icon'>
-                    <Icon name='chevron-down' />
+                    <Icon name={this.props.icon || 'caret-down'} />
                 </div>
             </div>
             <div className='select-list'>
