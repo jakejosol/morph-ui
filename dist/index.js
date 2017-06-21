@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.TextButton = exports.Logo = exports.Icon = exports.ButtonGroup = exports.Button = exports.Table = exports.SideMenu = exports.Side = exports.NavBar = exports.InfoCard = exports.Content = exports.Container = exports.Column = exports.CardLoader = exports.Card = exports.AppBar = exports.Textarea = exports.RadioGroup = exports.Radio = exports.InputNumber = exports.InputMoney = exports.InputGroup = exports.InputFile = exports.InputDate = exports.CheckboxGroup = exports.Checkbox = exports.PieChart = exports.ColumnGraph = exports.LineGraph = exports.BarStack = exports.Page = undefined;
+exports.TextButton = exports.Logo = exports.Icon = exports.ButtonGroup = exports.Button = exports.Table = exports.SideMenu = exports.Side = exports.NavBar = exports.InfoCard = exports.Content = exports.Container = exports.Column = exports.CardLoader = exports.Card = exports.AppBar = exports.Textarea = exports.SelectGroup = exports.RadioGroup = exports.Radio = exports.InputNumber = exports.InputMoney = exports.InputGroup = exports.InputFile = exports.InputDate = exports.CheckboxGroup = exports.Checkbox = exports.PieChart = exports.ColumnGraph = exports.LineGraph = exports.BarStack = exports.Page = undefined;
 
 var _page = require('./components/templates/page');
 
@@ -60,6 +60,10 @@ var _radio2 = _interopRequireDefault(_radio);
 var _radioGroup = require('./components/form/radio-group');
 
 var _radioGroup2 = _interopRequireDefault(_radioGroup);
+
+var _selectGroup = require('./components/form/select-group');
+
+var _selectGroup2 = _interopRequireDefault(_selectGroup);
 
 var _textarea = require('./components/form/textarea');
 
@@ -152,6 +156,7 @@ exports.InputMoney = _inputMoney2.default;
 exports.InputNumber = _inputNumber2.default;
 exports.Radio = _radio2.default;
 exports.RadioGroup = _radioGroup2.default;
+exports.SelectGroup = _selectGroup2.default;
 exports.Textarea = _textarea2.default;
 
 // Layout

@@ -17,6 +17,7 @@ export InputMoney from './components/form/input-money';
 export InputNumber from './components/form/input-number';
 export Radio from './components/form/radio';
 export RadioGroup from './components/form/radio-group';
+export SelectGroup from './components/form/select-group';
 export Textarea from './components/form/textarea';
 
 // Layout

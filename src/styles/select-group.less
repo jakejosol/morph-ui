@@ -1,0 +1,125 @@
+.select-group {
+    display:inline-block;
+    position:relative;
+	width:100%;
+	outline:none;
+	background:transparent;
+    height: 40px;
+    border:0;
+	border-bottom:1px solid rgba(0,0,0,0.4);
+	margin:20px 0;
+    overflow:visible;
+	-webkit-transition: border 0.3s ease;
+	-o-transition: border 0.3s ease;
+	transition: border 0.3s ease;
+    cursor:pointer;
+    color:#333;
+}
+
+.select-group:focus, 
+.select-group:active
+{
+	border-bottom:1px solid @primary-color;
+}
+
+.select-group.disabled, 
+.select-group.disabled
+{
+	opacity:0.3;
+}
+
+.select-group .select-input {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.select-group .select-input .select-label {
+    position:absolute;
+    top:50%;
+    left:0;
+    right:0;
+    transform:translateY(-50%);
+    transition:top 0.2s ease;
+}
+
+.select-group.filled .select-input .select-label {
+    position:absolute;
+    top: -10px;
+    font-size: 9pt;
+    color: #555;
+    transform:none;
+}
+
+.select-group .select-input .selected-value {
+    position:absolute;
+    top:50%;
+    left:0;
+    right:0;
+    transform:translateY(-50%);
+}
+
+.select-group .select-input .select-icon {
+    position:absolute;
+    top:50%;
+    right:0;
+    transform:translateY(-50%);
+    font-size:12pt;
+}
+
+.select-group .select-list {
+    display:none;
+}
+
+.select-group.active .select-list {
+    display:block;
+    z-index:5;
+}
+
+.select-group .select-list {
+    background:#fff;
+    position:absolute;
+    left:0;
+    top:41px;
+    width:100%;
+    max-height:200px;
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.2);
+    overflow-y:auto;
+}
+
+.select-group .select-list .list-item {
+    display:block;
+    cursor:pointer;
+    position:relative;
+}
+
+.select-group .select-list .list-item input[type=radio],
+.select-group .select-list .list-item input[type=checkbox] {
+    display:none;
+}
+
+.select-group .select-list .list-item .item-text {
+    padding:15px;
+    padding-right:30px;
+}
+
+.select-group .select-list .list-item input[type=radio]:checked + .item-text,
+.select-group .select-list .list-item input[type=checkbox]:checked + .item-text {
+    background:@primary-color;
+    color:#fff;
+    font-weight:bold;
+}
+
+.select-group .select-list .list-item input[type=radio]:checked + .item-text:after,
+.select-group .select-list .list-item input[type=checkbox]:checked + .item-text:after {
+    content: '\f00c';
+    font-family:FontAwesome;
+    position:absolute;
+    right: 15px;
+}
+
+.select-group .select-list .list-item .item-text:hover {
+    background:rgba(0,0,0,0.2);
+}

@@ -38,7 +38,6 @@ export default class Textarea extends React.Component {
 				value={this.props.value}
 				rows={this.state.rows}
 				onChange={this.onChange} />
-			{this.props.label? <label htmlFor={this.props.name}>{this.props.label}</label> : ''}
 			{this.props.validate? <span className='error'>{this.props.error}</span> : ''}
 		</div>;
 	}

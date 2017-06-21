@@ -65,11 +65,6 @@ var Textarea = function (_React$Component) {
 					value: this.props.value,
 					rows: this.state.rows,
 					onChange: this.onChange }),
-				this.props.label ? _react2.default.createElement(
-					'label',
-					{ htmlFor: this.props.name },
-					this.props.label
-				) : '',
 				this.props.validate ? _react2.default.createElement(
 					'span',
 					{ className: 'error' },
