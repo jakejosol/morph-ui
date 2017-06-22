@@ -29,9 +29,14 @@ var Icon = function (_React$Component) {
 	}
 
 	_createClass(Icon, [{
+		key: 'isSolo',
+		value: function isSolo() {
+			return this.props.solo ? ' solo' : '';
+		}
+	}, {
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('i', { className: 'icon fa fa-' + this.props.name });
+			return _react2.default.createElement('i', { className: 'icon fa fa-' + this.props.name + this.isSolo() });
 		}
 	}]);
 

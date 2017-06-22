@@ -29,25 +29,6 @@ var NavBar = function (_React$Component) {
 	}
 
 	_createClass(NavBar, [{
-		key: 'getLinks',
-		value: function getLinks() {
-			return this.props.links.map(function (link) {
-				return _react2.default.createElement(
-					'li',
-					{ key: link.url },
-					_react2.default.createElement(
-						'a',
-						{ href: link.url },
-						_react2.default.createElement(
-							'span',
-							null,
-							link.title
-						)
-					)
-				);
-			});
-		}
-	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
@@ -56,7 +37,7 @@ var NavBar = function (_React$Component) {
 				_react2.default.createElement(
 					'ul',
 					null,
-					this.getLinks()
+					this.props.children
 				)
 			);
 		}

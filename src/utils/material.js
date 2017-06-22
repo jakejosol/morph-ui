@@ -14,7 +14,7 @@ module.exports = {
 
             shadow += ambientY + "px " + ambientBlur + "px rgba(0, 0, 0, " + ambientAlpha + "), 0px ";
 
-            var directY = dp < 10 ? Math.floor(dp / 2) + 1 : dp - 4;
+            var directY = elevation < 10 ? Math.floor(elevation / 2) + 1 : elevation - 4;
             var directBlur = elevation == 1 ? 3 : elevation * 2;
             var directAlpha = (24 - Math.round(elevation / 10)) / 100;
 

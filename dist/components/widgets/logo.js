@@ -31,12 +31,19 @@ var Logo = function (_React$Component) {
 	_createClass(Logo, [{
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			return _react2.default.createElement(
 				'div',
 				{ className: 'logo' },
 				_react2.default.createElement(
 					'a',
-					{ href: '/' },
+					{ href: '#', onClick: function onClick(e) {
+							if (typeof _this2.props.onClick == 'function') {
+								e.preventDefault();
+								_this2.props.onClick();
+							}
+						} },
 					_react2.default.createElement(
 						'h1',
 						null,
