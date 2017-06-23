@@ -10,7 +10,7 @@ export default class Button extends React.Component {
     }
 
     getShadow() {
-        return Material.getShadowFromElevation(this.props.elevation || 0);
+        return Material.getShadowFromElevation(parseInt(this.props.elevation) || 0);
     }
 
     getType() {

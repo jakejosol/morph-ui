@@ -10,7 +10,7 @@ module.exports = {
 
             var ambientY = elevation;
             var ambientBlur = elevation == 1 ? 3 : elevation * 2;
-            var ambientAlpha = (elevation + 10 + (elevation / 9.38)) / 100;
+            var ambientAlpha = (elevation + 5 + (elevation / 4.38)) / 100;
 
             shadow += ambientY + "px " + ambientBlur + "px rgba(0, 0, 0, " + ambientAlpha + "), 0px ";
 
