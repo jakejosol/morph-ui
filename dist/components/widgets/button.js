@@ -43,7 +43,7 @@ var Button = function (_React$Component) {
     }, {
         key: 'getShadow',
         value: function getShadow() {
-            return _material2.default.getShadowFromElevation(this.props.elevation || 0);
+            return _material2.default.getShadowFromElevation(parseInt(this.props.elevation) || 0);
         }
     }, {
         key: 'getType',

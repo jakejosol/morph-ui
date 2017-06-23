@@ -31,6 +31,9 @@ export default class Button extends React.Component {
             this.props.float.bottom && (styles.bottom = this.props.float.bottom);
         }
 
+        this.props.width && (styles.width = this.props.width + 'px');
+        this.props.height && (styles.height = this.props.height + 'px');
+
         return <button onClick={this.props.onClick} 
             className={'button' + this.getType() + this.isRounded()}
             style={styles}
