@@ -36,6 +36,7 @@ export Table from './components/layout/table';
 // Widgets
 export Button from './components/widgets/button';
 export ButtonGroup from './components/widgets/button-group';
+export ButtonMenu from './components/widgets/button-menu';
 export Icon from './components/widgets/icon';
 export Logo from './components/widgets/logo';
 export TextButton from './components/widgets/text-button';

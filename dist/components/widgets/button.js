@@ -65,6 +65,9 @@ var Button = function (_React$Component) {
                 this.props.float.bottom && (styles.bottom = this.props.float.bottom);
             }
 
+            this.props.width && (styles.width = this.props.width);
+            this.props.height && (styles.height = this.props.height);
+
             return _react2.default.createElement(
                 'button',
                 { onClick: this.props.onClick,
