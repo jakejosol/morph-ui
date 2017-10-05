@@ -1,5 +1,5 @@
 module.exports = {
-    getShadowFromElevation: elevation => {
+    getShadowFromElevation: function(elevation) {
         if (elevation == 0)
         {
             return shadow;
