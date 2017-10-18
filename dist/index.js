@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.TextButton = exports.Logo = exports.Icon = exports.ButtonGroup = exports.Button = exports.Table = exports.SideMenu = exports.Side = exports.NavBar = exports.InfoCard = exports.Content = exports.Container = exports.Column = exports.CardLoader = exports.Card = exports.AppBar = exports.Textarea = exports.SelectGroup = exports.RadioGroup = exports.Radio = exports.InputNumber = exports.InputMoney = exports.InputGroup = exports.InputFile = exports.InputDate = exports.CheckboxGroup = exports.Checkbox = exports.PieChart = exports.ColumnGraph = exports.LineGraph = exports.BarStack = exports.Page = undefined;
+exports.TextButton = exports.Logo = exports.Icon = exports.ButtonMenu = exports.ButtonGroup = exports.Button = exports.Table = exports.SideMenu = exports.Side = exports.NavBar = exports.InfoCard = exports.Content = exports.Container = exports.Column = exports.CardLoader = exports.Card = exports.AppBar = exports.Textarea = exports.SelectGroup = exports.RadioGroup = exports.Radio = exports.InputNumber = exports.InputMoney = exports.InputGroup = exports.InputFile = exports.InputDate = exports.CheckboxGroup = exports.Checkbox = exports.PieChart = exports.ColumnGraph = exports.LineGraph = exports.BarStack = exports.Page = undefined;
 
 var _page = require('./components/templates/page');
 
@@ -121,6 +121,10 @@ var _buttonGroup = require('./components/widgets/button-group');
 
 var _buttonGroup2 = _interopRequireDefault(_buttonGroup);
 
+var _buttonMenu = require('./components/widgets/button-menu');
+
+var _buttonMenu2 = _interopRequireDefault(_buttonMenu);
+
 var _icon = require('./components/widgets/icon');
 
 var _icon2 = _interopRequireDefault(_icon);
@@ -177,6 +181,7 @@ exports.Table = _table2.default;
 
 exports.Button = _button2.default;
 exports.ButtonGroup = _buttonGroup2.default;
+exports.ButtonMenu = _buttonMenu2.default;
 exports.Icon = _icon2.default;
 exports.Logo = _logo2.default;
 exports.TextButton = _textButton2.default;
