@@ -31,7 +31,11 @@ var InputMoney = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (InputMoney.__proto__ || Object.getPrototypeOf(InputMoney)).call(this, props));
 
-    _this.state = { filled: _this.props.value ? true : _this.props.defaultValue ? true : false, error: null };
+    _this.state = {
+      filled: _this.props.value ? true : _this.props.defaultValue ? true : false,
+      value: _this.props.defaultValue,
+      error: null
+    };
     _this.onChange = _this.onChange.bind(_this);
     _this.onBlur = _this.onBlur.bind(_this);
     _this.formatCurrency = _this.formatCurrency.bind(_this);
@@ -111,7 +115,6 @@ var InputMoney = function (_React$Component) {
           type: 'text',
           className: this.state.filled ? 'filled' : '',
           placeholder: this.props.placeholder,
-          defaultValue: this.props.defaultValue,
           disabled: this.props.disabled,
           value: this.state.value,
           onChange: this.onChange,

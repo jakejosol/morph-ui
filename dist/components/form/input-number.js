@@ -31,7 +31,11 @@ var InputNumber = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (InputNumber.__proto__ || Object.getPrototypeOf(InputNumber)).call(this, props));
 
-		_this.state = { filled: _this.props.value ? true : _this.props.defaultValue ? true : false, error: null };
+		_this.state = {
+			filled: _this.props.value ? true : _this.props.defaultValue ? true : false,
+			value: _this.props.defaultValue,
+			error: null
+		};
 		_this.onChange = _this.onChange.bind(_this);
 		_this.onBlur = _this.onBlur.bind(_this);
 		_this.formatNumber = _this.formatNumber.bind(_this);
@@ -77,7 +81,6 @@ var InputNumber = function (_React$Component) {
 					type: 'text',
 					className: this.state.filled ? 'filled' : '',
 					placeholder: this.props.placeholder,
-					defaultValue: this.props.defaultValue,
 					disabled: this.props.disabled,
 					value: this.state.value,
 					onChange: this.onChange,
