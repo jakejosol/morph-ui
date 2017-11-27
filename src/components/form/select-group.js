@@ -9,8 +9,8 @@ export default class SelectGroup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: this.props.defaultValue? true : false,
-            selected: this.props.defaultValue || this.props.multiple? [] : { label: '', value: '' },
+            active: false,
+            selected: this.props.defaultValue || (this.props.multiple? [] : { label: '', value: '' }),
             filled: this.props.defaultValue? true : false
         };
         this.toggle = this.toggle.bind(this);
