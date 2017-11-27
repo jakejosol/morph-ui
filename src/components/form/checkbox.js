@@ -20,7 +20,7 @@ export default class Checkbox extends React.Component {
 				id={'checkbox-' + this.props.name + '-' + this.props.value} 
 				value={this.props.value}
 				name={this.props.name + '[]'} 
-				checked={this.props.active || this.props.defaultValue}
+				checked={typeof this.props.active == 'undefined' ? this.props.defaultValue : this.props.active}
 				onChange={this.onChange} />
 			<span><Markdown source={this.props.label} /></span>
 		</label>;
