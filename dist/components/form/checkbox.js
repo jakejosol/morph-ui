@@ -51,7 +51,7 @@ var Checkbox = function (_React$Component) {
 					id: 'checkbox-' + this.props.name + '-' + this.props.value,
 					value: this.props.value,
 					name: this.props.name + '[]',
-					checked: this.props.active,
+					checked: this.props.active || this.props.defaultValue,
 					onChange: this.onChange }),
 				_react2.default.createElement(
 					'span',
