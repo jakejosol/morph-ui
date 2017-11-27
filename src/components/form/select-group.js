@@ -9,9 +9,9 @@ export default class SelectGroup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: false,
+            active: this.props.defaultValue? true : false,
             selected: this.props.defaultValue || this.props.multiple? [] : { label: '', value: '' },
-            filled: this.props.value? true : (this.props.defaultValue? true : false) 
+            filled: this.props.defaultValue? true : false
         };
         this.toggle = this.toggle.bind(this);
         this.close = this.close.bind(this);
@@ -21,7 +21,6 @@ export default class SelectGroup extends React.Component {
 	selectItem(item) {
         return (event) => {
             event.preventDefault();
-            console.log('selected', item);
             var selected = this.state.selected;
             var filled = true;
             var active = false;
