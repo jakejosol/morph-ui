@@ -38,7 +38,7 @@ var RadioGroup = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (RadioGroup.__proto__ || Object.getPrototypeOf(RadioGroup)).call(this, props));
 
-		_this.state = { selected: null, items: _this.props.items };
+		_this.state = { selected: _this.props.defaultValue, items: _this.props.items };
 		_this.selectItem = _this.selectItem.bind(_this);
 		return _this;
 	}
@@ -48,7 +48,7 @@ var RadioGroup = function (_React$Component) {
 		value: function componentWillReceiveProps(props) {
 			for (var index in props.items) {
 				var item = props.items[index];
-				if (item.label != this.state.items[index].label || item.value != this.state.items[index].value) return this.setState({ selected: null, items: props.items });
+				if (item.label != this.state.items[index].label || item.value != this.state.items[index].value) return this.setState({ selected: this.props.defaultValue, items: props.items });
 			}
 		}
 	}, {

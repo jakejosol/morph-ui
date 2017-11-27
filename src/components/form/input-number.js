@@ -5,7 +5,7 @@ import moment from 'moment-timezone';
 export default class InputNumber extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { filled: this.props.value? true : (this.props.defaultValue? true : false), value: '', error: null };
+		this.state = { filled: this.props.value? true : (this.props.defaultValue? true : false), error: null };
 		this.onChange = this.onChange.bind(this);
 		this.onBlur = this.onBlur.bind(this);
 		this.formatNumber = this.formatNumber.bind(this);
@@ -22,14 +22,14 @@ export default class InputNumber extends React.Component {
 		var value = e.target.value;
 		var onChange = this.props.onChange;
 
-		this.setState({ filled: value.toString() !== ''? true : false, value: value });
+		this.setState({ filled: value && value.toString() !== ''? true : false, value: value });
     }
     
     onBlur(e) {
 		var value = e.target.value;
 		var onChange = this.props.onChange;
 
-		this.setState({ filled: value.toString() !== ''? true : false, value: this.formatNumber(value) }, () => {
+		this.setState({ filled: value && value.toString() !== ''? true : false, value: this.formatNumber(value) }, () => {
 			if(onChange) onChange(this.state.value);
 		});
 	}
