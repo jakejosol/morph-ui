@@ -41,6 +41,13 @@ var Checkbox = function (_React$Component) {
 			if (this.props.onChange) this.props.onChange(this.props.value);
 		}
 	}, {
+		key: 'getLabel',
+		value: function getLabel() {
+			if (this.props.isMarkdown) {
+				return _react2.default.createElement(_reactMarkdown2.default, { source: this.props.label });
+			} else return this.props.label;
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
@@ -56,7 +63,7 @@ var Checkbox = function (_React$Component) {
 				_react2.default.createElement(
 					'span',
 					null,
-					_react2.default.createElement(_reactMarkdown2.default, { source: this.props.label })
+					this.getLabel()
 				)
 			);
 		}
