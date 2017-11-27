@@ -31,7 +31,7 @@ var InputMoney = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (InputMoney.__proto__ || Object.getPrototypeOf(InputMoney)).call(this, props));
 
-    _this.state = { filled: _this.props.value ? true : _this.props.defaultValue ? true : false, value: '', error: null };
+    _this.state = { filled: _this.props.value ? true : _this.props.defaultValue ? true : false, error: null };
     _this.onChange = _this.onChange.bind(_this);
     _this.onBlur = _this.onBlur.bind(_this);
     _this.formatCurrency = _this.formatCurrency.bind(_this);
@@ -85,7 +85,7 @@ var InputMoney = function (_React$Component) {
       var value = e.target.value;
       var onChange = this.props.onChange;
 
-      this.setState({ filled: value.toString() !== '' ? true : false, value: value });
+      this.setState({ filled: value && value.toString() !== '' ? true : false, value: value });
     }
   }, {
     key: 'onBlur',
@@ -95,7 +95,7 @@ var InputMoney = function (_React$Component) {
       var value = e.target.value;
       var onChange = this.props.onChange;
 
-      this.setState({ filled: value.toString() !== '' ? true : false, value: this.formatCurrency(value) }, function () {
+      this.setState({ filled: value && value.toString() !== '' ? true : false, value: this.formatCurrency(value) }, function () {
         if (onChange) onChange(_this2.state.value);
       });
     }
