@@ -33,7 +33,7 @@ var InputNumber = function (_React$Component) {
 
 								_this.state = {
 												filled: _this.props.value ? true : _this.props.defaultValue ? true : false,
-												value: _this.props.defaultValue || '0',
+												value: _this.props.defaultValue || '',
 												error: null
 								};
 								_this.onFocus = _this.onFocus.bind(_this);
