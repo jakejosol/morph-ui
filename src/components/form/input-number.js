@@ -7,36 +7,49 @@ export default class InputNumber extends React.Component {
 		super(props);
 		this.state = { 
 			filled: this.props.value? true : (this.props.defaultValue? true : false), 
-			value: this.props.defaultValue, 
+            value: this.props.defaultValue || '0',
 			error: null 
 		};
+        this.onFocus = this.onFocus.bind(this);
 		this.onChange = this.onChange.bind(this);
 		this.onBlur = this.onBlur.bind(this);
 		this.formatNumber = this.formatNumber.bind(this);
 	}
 
     formatNumber(numbr) {
-        if(!numbr) return '';
-        if(isNaN(numbr)) return '0';
         if(parseInt(numbr) == numbr || this.props.type == 'integer' || this.props.type == 'int') return parseInt(numbr);
         else return parseFloat(numbr);
     }
+	
+	onFocus() {
+		if(this.state.value == 0)
+			this.setState({ value: '' });
+	}
+    
+    onBlur() {
+        var changeListener = () => {
+            if(typeof this.props.onChange == 'function')
+                this.props.onChange(this.state.value);
+        };
+
+        if(this.state.value.length == 0)
+            this.setState({ value: 0 }, changeListener);
+        else
+            changeListener();
+	}
     
     onChange(e) {
-		var value = e.target.value;
-		var onChange = this.props.onChange;
+        var value = e.target.value;
 
-		this.setState({ filled: value && value.toString() !== ''? true : false, value: value });
+        if(isNaN(value))
+            this.setState({ value: this.state.value });    
+        else if(value.length == 0)
+            this.setState({ value: '' });
+        else {
+            var parsedValue = this.formatNumber(value);
+            this.setState({ value: Math.max(parsedValue, 0) });
+        }
     }
-    
-    onBlur(e) {
-		var value = e.target.value;
-		var onChange = this.props.onChange;
-
-		this.setState({ filled: value && value.toString() !== ''? true : false, value: this.formatNumber(value) }, () => {
-			if(onChange) onChange(this.state.value);
-		});
-	}
 
 	render() {
 		return <div className={'input-group ' + (this.props.rounded? 'rounded ' : '') + (this.props.type || '')}>
@@ -47,9 +60,12 @@ export default class InputNumber extends React.Component {
 				className={this.state.filled? 'filled' : ''}
 				placeholder={this.props.placeholder}
 				disabled={this.props.disabled}
+				min={this.props.min}
+				max={this.props.max}
 				value={this.state.value}
-                onChange={this.onChange}
-				onBlur={this.onBlur} />
+                onFocus={this.onFocus}
+                onBlur={this.onBlur}
+                onChange={this.onChange} />
 			{this.props.label? <label htmlFor={this.props.name}>{this.props.label}</label> : ''}
 			{this.props.validate? <span className='error'>{this.props.error}</span> : ''}
 		</div>;
