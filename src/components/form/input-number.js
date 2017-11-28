@@ -33,7 +33,7 @@ export default class InputNumber extends React.Component {
         };
 
         if(this.state.value.length == 0)
-            this.setState({ value: 0, filled: false }, changeListener);
+            this.setState({ value: '', filled: false }, changeListener);
         else
             changeListener();
 	}
