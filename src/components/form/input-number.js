@@ -47,10 +47,6 @@ export default class InputNumber extends React.Component {
             this.setState({ value: '', filled: true });
         else {
 			var parsedValue = this.formatNumber(value);
-			if(this.props.min)
-				parsedValue = Math.max(parsedValue, this.props.min);
-			if(this.props.max)
-				parsedValue = Math.min(parsedValue, this.props.max);
             this.setState({ value: parsedValue, filled: parsedValue.toString().length > 0 });
         }
     }
