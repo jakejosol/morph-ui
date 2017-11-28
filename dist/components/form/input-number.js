@@ -62,7 +62,7 @@ var InputNumber = function (_React$Component) {
 																if (typeof _this2.props.onChange == 'function') _this2.props.onChange(_this2.state.value);
 												};
 
-												if (this.state.value.length == 0) this.setState({ value: 0, filled: false }, changeListener);else changeListener();
+												if (this.state.value.length == 0) this.setState({ value: '', filled: false }, changeListener);else changeListener();
 								}
 				}, {
 								key: 'onChange',

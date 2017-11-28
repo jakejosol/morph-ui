@@ -7,7 +7,7 @@ export default class InputNumber extends React.Component {
 		super(props);
 		this.state = { 
 			filled: this.props.value? true : (this.props.defaultValue? true : false), 
-            value: this.props.defaultValue || '0',
+            value: this.props.defaultValue || '',
 			error: null 
 		};
         this.onFocus = this.onFocus.bind(this);
