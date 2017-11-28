@@ -23,7 +23,7 @@ export default class InputNumber extends React.Component {
 	
 	onFocus() {
 		if(this.state.value == 0)
-			this.setState({ value: '' });
+			this.setState({ value: '', filled: true });
 	}
     
     onBlur() {
@@ -33,7 +33,7 @@ export default class InputNumber extends React.Component {
         };
 
         if(this.state.value.length == 0)
-            this.setState({ value: 0 }, changeListener);
+            this.setState({ value: 0, filled: false }, changeListener);
         else
             changeListener();
 	}
@@ -42,12 +42,16 @@ export default class InputNumber extends React.Component {
         var value = e.target.value;
 
         if(isNaN(value))
-            this.setState({ value: this.state.value });    
+            this.setState({ value: this.state.value, filled: true });    
         else if(value.length == 0)
-            this.setState({ value: '' });
+            this.setState({ value: '', filled: true });
         else {
-            var parsedValue = this.formatNumber(value);
-            this.setState({ value: Math.max(parsedValue, 0) });
+			var parsedValue = this.formatNumber(value);
+			if(this.props.min)
+				parsedValue = Math.max(parsedValue, this.props.min);
+			if(this.props.max)
+				parsedValue = Math.min(parsedValue, this.props.max);
+            this.setState({ value: parsedValue, filled: parsedValue.toString().length > 0 });
         }
     }
 
@@ -60,8 +64,6 @@ export default class InputNumber extends React.Component {
 				className={this.state.filled? 'filled' : ''}
 				placeholder={this.props.placeholder}
 				disabled={this.props.disabled}
-				min={this.props.min}
-				max={this.props.max}
 				value={this.state.value}
                 onFocus={this.onFocus}
                 onBlur={this.onBlur}

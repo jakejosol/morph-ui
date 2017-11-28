@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+				value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -24,82 +24,90 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var InputNumber = function (_React$Component) {
-	_inherits(InputNumber, _React$Component);
+				_inherits(InputNumber, _React$Component);
 
-	function InputNumber(props) {
-		_classCallCheck(this, InputNumber);
+				function InputNumber(props) {
+								_classCallCheck(this, InputNumber);
 
-		var _this = _possibleConstructorReturn(this, (InputNumber.__proto__ || Object.getPrototypeOf(InputNumber)).call(this, props));
+								var _this = _possibleConstructorReturn(this, (InputNumber.__proto__ || Object.getPrototypeOf(InputNumber)).call(this, props));
 
-		_this.state = {
-			filled: _this.props.value ? true : _this.props.defaultValue ? true : false,
-			value: _this.props.defaultValue,
-			error: null
-		};
-		_this.onChange = _this.onChange.bind(_this);
-		_this.onBlur = _this.onBlur.bind(_this);
-		_this.formatNumber = _this.formatNumber.bind(_this);
-		return _this;
-	}
+								_this.state = {
+												filled: _this.props.value ? true : _this.props.defaultValue ? true : false,
+												value: _this.props.defaultValue || '0',
+												error: null
+								};
+								_this.onFocus = _this.onFocus.bind(_this);
+								_this.onChange = _this.onChange.bind(_this);
+								_this.onBlur = _this.onBlur.bind(_this);
+								_this.formatNumber = _this.formatNumber.bind(_this);
+								return _this;
+				}
 
-	_createClass(InputNumber, [{
-		key: 'formatNumber',
-		value: function formatNumber(numbr) {
-			if (!numbr) return '';
-			if (isNaN(numbr)) return '0';
-			if (parseInt(numbr) == numbr || this.props.type == 'integer' || this.props.type == 'int') return parseInt(numbr);else return parseFloat(numbr);
-		}
-	}, {
-		key: 'onChange',
-		value: function onChange(e) {
-			var value = e.target.value;
-			var onChange = this.props.onChange;
+				_createClass(InputNumber, [{
+								key: 'formatNumber',
+								value: function formatNumber(numbr) {
+												if (parseInt(numbr) == numbr || this.props.type == 'integer' || this.props.type == 'int') return parseInt(numbr);else return parseFloat(numbr);
+								}
+				}, {
+								key: 'onFocus',
+								value: function onFocus() {
+												if (this.state.value == 0) this.setState({ value: '' });
+								}
+				}, {
+								key: 'onBlur',
+								value: function onBlur() {
+												var _this2 = this;
 
-			this.setState({ filled: value && value.toString() !== '' ? true : false, value: value });
-		}
-	}, {
-		key: 'onBlur',
-		value: function onBlur(e) {
-			var _this2 = this;
+												var changeListener = function changeListener() {
+																if (typeof _this2.props.onChange == 'function') _this2.props.onChange(_this2.state.value);
+												};
 
-			var value = e.target.value;
-			var onChange = this.props.onChange;
+												if (this.state.value.length == 0) this.setState({ value: 0 }, changeListener);else changeListener();
+								}
+				}, {
+								key: 'onChange',
+								value: function onChange(e) {
+												var value = e.target.value;
 
-			this.setState({ filled: value && value.toString() !== '' ? true : false, value: this.formatNumber(value) }, function () {
-				if (onChange) onChange(_this2.state.value);
-			});
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'div',
-				{ className: 'input-group ' + (this.props.rounded ? 'rounded ' : '') + (this.props.type || '') },
-				_react2.default.createElement('input', {
-					id: this.props.id,
-					name: this.props.name,
-					type: 'text',
-					className: this.state.filled ? 'filled' : '',
-					placeholder: this.props.placeholder,
-					disabled: this.props.disabled,
-					value: this.state.value,
-					onChange: this.onChange,
-					onBlur: this.onBlur }),
-				this.props.label ? _react2.default.createElement(
-					'label',
-					{ htmlFor: this.props.name },
-					this.props.label
-				) : '',
-				this.props.validate ? _react2.default.createElement(
-					'span',
-					{ className: 'error' },
-					this.props.error
-				) : ''
-			);
-		}
-	}]);
+												if (isNaN(value)) this.setState({ value: this.state.value });else if (value.length == 0) this.setState({ value: '' });else {
+																var parsedValue = this.formatNumber(value);
+																this.setState({ value: Math.max(parsedValue, 0) });
+												}
+								}
+				}, {
+								key: 'render',
+								value: function render() {
+												return _react2.default.createElement(
+																'div',
+																{ className: 'input-group ' + (this.props.rounded ? 'rounded ' : '') + (this.props.type || '') },
+																_react2.default.createElement('input', {
+																				id: this.props.id,
+																				name: this.props.name,
+																				type: 'text',
+																				className: this.state.filled ? 'filled' : '',
+																				placeholder: this.props.placeholder,
+																				disabled: this.props.disabled,
+																				min: this.props.min,
+																				max: this.props.max,
+																				value: this.state.value,
+																				onFocus: this.onFocus,
+																				onBlur: this.onBlur,
+																				onChange: this.onChange }),
+																this.props.label ? _react2.default.createElement(
+																				'label',
+																				{ htmlFor: this.props.name },
+																				this.props.label
+																) : '',
+																this.props.validate ? _react2.default.createElement(
+																				'span',
+																				{ className: 'error' },
+																				this.props.error
+																) : ''
+												);
+								}
+				}]);
 
-	return InputNumber;
+				return InputNumber;
 }(_react2.default.Component);
 
 exports.default = InputNumber;
