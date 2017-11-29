@@ -23,8 +23,7 @@ export default class InputNumber extends React.Component {
     }
 	
 	onFocus() {
-		if(this.state.value == 0)
-			this.setState({ value: '', filled: true });
+		this.setState({ filled: true });
 	}
     
     onBlur() {
