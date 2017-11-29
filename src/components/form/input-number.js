@@ -17,6 +17,7 @@ export default class InputNumber extends React.Component {
 	}
 
     formatNumber(numbr) {
+		if(this.props.type == 'string') return numbr.toString().replace(/\D/g,'');
         if(parseInt(numbr) == numbr || this.props.type == 'integer' || this.props.type == 'int') return parseInt(numbr);
         else return parseFloat(numbr);
     }
@@ -30,21 +31,16 @@ export default class InputNumber extends React.Component {
         var changeListener = () => {
             if(typeof this.props.onChange == 'function')
                 this.props.onChange(this.state.value);
-        };
-
-        if(this.state.value.length == 0)
-            this.setState({ value: '', filled: false }, changeListener);
-        else
-            changeListener();
+		};
+		
+		changeListener();
 	}
     
     onChange(e) {
         var value = e.target.value;
 
         if(isNaN(value))
-            this.setState({ value: this.state.value, filled: true });    
-        else if(value.length == 0)
-            this.setState({ value: '', filled: true });
+            this.setState({ value: this.state.value, filled: true });
         else {
 			var parsedValue = this.formatNumber(value);
             this.setState({ value: parsedValue, filled: parsedValue.toString().length > 0 });
