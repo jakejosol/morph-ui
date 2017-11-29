@@ -1,6 +1,6 @@
 {
   "name": "morph-ui",
-  "version": "2.5.12",
+  "version": "2.5.13",
   "description": "Morph UI",
   "main": "./dist/index.js",
   "scripts": {
